@@ -1,7 +1,7 @@
 package Mail::Chimp::API;
 use Mouse;
 
-our $VERSION = '0.1';
+our $VERSION = '0.11';
 
 =head1 NAME
 
@@ -70,7 +70,6 @@ has 'key'      => (is => 'ro', isa => 'Str');
 has 'api'      => (is => 'ro', isa => 'XMLRPC::Lite');
 
 sub BUILD {
-  __PACKAGE__->_make_api_method($_) for @api_methods;
   $_[0]->{api} = XMLRPC::Lite->proxy(MAILCHIMP_API);
   $_[0]->{key} = $_[0]->_call('login', $_[0]->username, $_[0]->password);
 }
@@ -142,7 +141,7 @@ my @api_methods = qw(
   lists
 );
 
-
+__PACKAGE__->_make_api_method($_) for @api_methods;
 
 
 

@@ -1,13 +1,22 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Mail-Chimp
-version:      0.1
-version_from: lib/Mail/Chimp.pm
-installdirs:  site
+--- #YAML:1.0
+name:               Mail-Chimp
+version:            0.11
+abstract:           Perl wrapper around the Mailchimp v1.1 API
+author:
+    - Dave Pirotte (dpirotte@gmail.com)
+license:            unknown
+distribution_type:  module
+configure_requires:
+    ExtUtils::MakeMaker:  0
 requires:
-    Mouse:                         0.16
-    Test::Simple:                  0.44
-    XMLRPC::Lite:                  0.710.06
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.30
+    Mouse:         0.16
+    Test::Simple:  0.44
+    XMLRPC::Lite:  0.710.06
+no_index:
+    directory:
+        - t
+        - inc
+generated_by:       ExtUtils::MakeMaker version 6.46
+meta-spec:
+    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
+    version:  1.4
