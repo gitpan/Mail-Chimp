@@ -1,11 +1,10 @@
 package Mail::Chimp;
-use Mouse;
 
-our $VERSION     = '0.12';
+our $VERSION     = '0.50';
 
 =head1 NAME
 
-Mail::Chimp - Perl wrapper around the Mailchimp v1.1 API
+Mail::Chimp - Perl wrapper around the Mailchimp v1.2 API
 
 =head1 DESCRIPTION
 
@@ -13,13 +12,13 @@ You should look at Mail::Chimp::API instead.
 
 =head1 DEPENDENCIES
 
- Mouse
+ Moose
  XMLRPC::Lite
 
 =head1 SEE ALSO
 
  XMLRPC::Lite
- <http://api.mailchimp.com/1.1/>
+ <http://www.mailchimp.com/api/rtfm/>
 
 =head1 COPYRIGHT
 
@@ -32,6 +31,8 @@ This library is free software; you can redistribute it and/or modify it under th
 Dave Pirotte (dpirotte@gmail.com)
 
 Drew Taylor (drew@drewtaylor.com)
+
+Ask Bjørn Hansen (ask@develooper.com)
 
 =cut
 
